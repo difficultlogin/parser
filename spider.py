@@ -5,8 +5,6 @@ import logging, json, re, datetime
 from grab.spider import Spider, Task
 from grab import Grab
 
-results_file = open('results_file.txt', 'w+')
-
 class My_Spider(Spider):
 	results = []
 
@@ -36,8 +34,6 @@ class My_Spider(Spider):
 
 			yield Task('all_post', url)
 			count += 1
-
-			if count > 1: break
 
 	def task_all_post(self, grab, task):
 		for post in grab.doc.select('//table[contains(@class, "b-story")]//a[contains(@class, "b-story__link")]'):
@@ -77,7 +73,7 @@ class My_Spider(Spider):
 			tags.append(tag.text())
 
 		author = grab.doc.select('//div[contains(@class, "b-story__header-additional")]//a')[1].attr('href')
-		date = datetime.datetime.fromtimestamp(int(grab.doc.select('//div[contains(@class, "b-story__header-additional")]//a[contains(@class, "detailDate")]').attr('title'))).strftime('%Y-%m-%d %H:%M:%S')
+		date = self.get_date(int(grab.doc.select('//div[contains(@class, "b-story__header-additional")]//a[contains(@class, "detailDate")]').attr('title')))
 
 		comments = []
 		for x in range(0, number_comments):
@@ -109,4 +105,4 @@ if __name__ == '__main__':
     logging.basicConfig(level = logging.DEBUG, filename = 'logging.txt')
     g = My_Spider(thread_number = 4)
     g.run()
-    # g.results_file
+    # g.results
