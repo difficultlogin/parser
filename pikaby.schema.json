@@ -1,0 +1,44 @@
+{  
+  "url":"http://pikabu.ru/story/sladkaya_smert_3492118",
+  "rating":{  
+    "plus":4739,
+    "minus":367
+  },
+  "number_comments":158,
+  "title":"Пап, тут тебе звонят",
+  "content":[  
+    {  
+      "type":"img",
+      "value":"http://cs5.pikabu.ru/post_img/2015/07/13/5/1436772600_332731624.jpg"
+    },
+    {  
+      "type":"img",
+      "value":"http://cs5.pikabu.ru/post_img/2015/07/13/5/1436772600_332731624.gif"
+    }
+  ],
+  "tags":[  
+    "гифка",
+    "прикол",
+    "розыгрыш"
+  ],
+  "author":"http://pikabu.ru/profile/Icebergo",
+  "date":"13 июля 2015 в 10:30",
+  "comments":[  
+    {  
+      "id":"49689092",
+      "parent_id":"0",
+      "author":"http://pikabu.ru/profile/Vovarus",
+      "date":"13 июля 2015 в 10:35",
+      "text":"И получил нормального леща, потом от бати",
+      "rating":499
+    },
+    {  
+      "id":"49689553",
+      "parent_id":"49689092",
+      "author":"http://pikabu.ru/profile/Roxento",
+      "date":"13 июля 2015 в 10:45",
+      "text":"Я прям слышу этот звук отборного леща",
+      "rating":286
+    }
+  ]
+}
