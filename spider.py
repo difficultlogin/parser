@@ -101,8 +101,7 @@ class My_Spider(Spider):
 		self.results.append(json.dumps(obj))
 
 
-if __name__ == '__main__':
-    logging.basicConfig(level = logging.DEBUG, filename = 'logging.txt')
-    g = My_Spider(thread_number = 4)
-    g.run()
-    # g.results
+# logging.basicConfig(level = logging.DEBUG, filename = 'logging.txt')
+g = My_Spider(thread_number = 4)
+g.run()
+g.results # результат работы 
