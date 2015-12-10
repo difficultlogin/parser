@@ -10,7 +10,6 @@ class My_Spider(Spider):
 
 	def check_page(self, url):
 		g = Grab()
-		print(url)
 		g.go(url)
 		try:
 			g.doc.select('//div[@id="no_stories_msg"]').text()
@@ -104,4 +103,4 @@ class My_Spider(Spider):
 # logging.basicConfig(level = logging.DEBUG, filename = 'logging.txt')
 g = My_Spider(thread_number = 4)
 g.run()
-g.results # результат работы 
+print(g.results)
